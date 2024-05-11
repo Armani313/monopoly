@@ -1,0 +1,145 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: #35363b;
+    color: #ffffff;
+}
+.wrapper {
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px
+}
+
+/* Players */
+
+.players {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.player-card {
+    background: #26272b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 10px;
+}
+
+.player-card--dead {
+    background: #26272b77;
+}
+
+.player-card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.player-card__name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.player-card__avatar--red {
+    background: red;
+}
+
+.player-card__avatar--blue {
+    background: blue;
+}
+
+/* Board */
+
+.board {
+    flex: 1;
+    display: grid;
+    gap: 16px;
+    grid-template-areas:
+        "top     top     top"
+        "left    center  right"
+        "bottom  bottom  bottom";
+    grid-template-columns: 120px 1fr 120px;
+}
+.board__top {
+    grid-area: top;
+    display: flex;
+    justify-content: space-between;
+}
+.board__right {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.board__bottom {
+    grid-area: bottom;
+    display: flex;
+    justify-content: space-between;
+}
+.board__left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.board__center {
+    grid-area: center;
+}
+
+.board__field {
+    background: yellow;
+}
+
+.board__top .board__field,
+.board__bottom .board__field {
+    width: 80px;
+    height: 120px;
+}
+
+.board__left .board__field,
+.board__right .board__field {
+    width: 120px;
+    height: 80px;
+}
+
+.board__top .board__field:first-child,
+.board__top .board__field:last-child,
+.board__bottom .board__field:first-child,
+.board__bottom .board__field:last-child {
+    width: 120px;
+    height: 120px;
+}
+
+/*.board {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.board__row {
+    display: flex;
+    gap: 8px
+}
+
+.board__col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.board__field {
+    width: 80px;
+    height: 80px;
+    background: yellow;
+}
+
+.board__center {
+    flex: 1;
+}*/
